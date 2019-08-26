@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
   addNewServer = false;
+  createNewServerStatus = 'NO Server was created!!';
   constructor() {
     setTimeout(() => {
       this.addNewServer = true;
@@ -17,4 +17,7 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  getServerStatus(){
+    this.createNewServerStatus='New Server is created';
+  }
 }

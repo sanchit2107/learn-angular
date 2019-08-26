@@ -1,3 +1,9 @@
-<button class="btn btn-primary" [disabled]="!addNewServer">Add Server</button>
-<app-server></app-server>
-<app-server></app-server>
+<div class="container">
+    <button class="btn btn-primary" [disabled]="!addNewServer"
+    (click)='getServerStatus()' >Add Server</button>
+    <p>{{ createNewServerStatus }}</p>
+    <p [innerText]="addNewServer" ></p>
+    <app-server></app-server>
+    <app-server></app-server>
+</div>
+
