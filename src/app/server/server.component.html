@@ -5,4 +5,7 @@
 
 
 <label for="">Styling</label>
-<p [ngStyle] = "{backgroundColor: getColor()}">Server with serverId= {{serverID}} having status={{serverStatus}} </p>
+<p 
+[ngStyle] = "{backgroundColor: getColor()}"
+[ngClass] = "{online: serverStatus === 'Online'}"
+>Server with serverId= {{serverID}} having status={{serverStatus}} </p>
