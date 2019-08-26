@@ -14,7 +14,7 @@
 <div class="container">
     <button class="btn btn-primary" [disabled]="!addNewServer"
     (click)='getServerStatus()' >Add Server</button>
-    <p>{{ createNewServerStatus }}</p>
+    <p *ngIf= "createdStatus" >{{ createNewServerStatus }}</p>
     <p [innerText]="addNewServer" ></p>
     <app-server></app-server>
     
